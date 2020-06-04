@@ -5,7 +5,7 @@ import "../utils/fontawesome"
 
 const Header = props => {
   return (
-    <div>
+    <div className="header">
       <SEO title={props.title} description={props.description}></SEO>
       <h1>Header</h1>
       <Nav></Nav>
