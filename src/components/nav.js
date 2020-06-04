@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome } from "@fortawesome/free-solid-svg-icons"
 
 const Nav = () => {
   return (
@@ -9,7 +8,7 @@ const Nav = () => {
       <ul>
         <li>
           <Link to="/">
-            <FontAwesomeIcon icon={faHome}></FontAwesomeIcon> Home
+            <FontAwesomeIcon icon="home"></FontAwesomeIcon> Home
           </Link>
         </li>
       </ul>

@@ -1,6 +1,8 @@
 import React from "react"
 import Nav from "./nav"
 import SEO from "./seo"
+import "../utils/fontawesome"
+
 const Header = props => {
   return (
     <div>
