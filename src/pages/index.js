@@ -1,12 +1,11 @@
 import React from "react"
-
+import Layout from "../components/layout"
 const App = () => {
-  const headercss = "uppercase text-orange-500"
   return (
-    <div className="p-4">
-      <h1 className={headercss}>Test of tailwindcss</h1>
+    <Layout>
+      <h1 className="uppercase text-orange-500">Test of tailwindcss</h1>
       <h2 className="subheading">Oh MY!</h2>
-    </div>
+    </Layout>
   )
 }
 
