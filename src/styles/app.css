@@ -1,0 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+.subheading {
+  @apply text-gray-500 uppercase;
+}
+
+@tailwind utilities;
