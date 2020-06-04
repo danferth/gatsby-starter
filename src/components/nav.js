@@ -1,11 +1,15 @@
 import React from "react"
-import { Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 const Nav = () => {
   return (
-    <div>
-      <p>nav</p>
-    </div>
+    <nav className="nav">
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+      </ul>
+    </nav>
   )
 }
 

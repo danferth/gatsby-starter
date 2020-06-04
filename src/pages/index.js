@@ -2,10 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 const App = () => {
   return (
-    <Layout
-      title="talk to me"
-      description="this is going to work i can feel it"
-    >
+    <Layout title="home" description="description of page">
       <p>Lorem Ipsum some stuff</p>
     </Layout>
   )
