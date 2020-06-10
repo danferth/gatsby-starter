@@ -55,7 +55,7 @@ const Contact = () => {
           ref={register({ required: true })}
         ></textarea>
         {errors.field && <p>error message</p>}
-        <button class="button" type="submit" name="button">
+        <button type="submit" name="button">
           <i class="fa fa-paper-plane">submit</i>
         </button>
       </form>
