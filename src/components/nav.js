@@ -1,16 +1,23 @@
 import React from "react"
-import { Link } from "gatsby"
+import NavLink from "./navlink"
+import { css } from "@emotion/core"
+import tw from "tailwind.macro"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Nav = () => {
   return (
-    <nav className="nav">
-      <Link to="/">
+    <div
+      className="nav"
+      css={css`
+        ${tw`py-4 bg-orange-1`}
+      `}
+    >
+      <NavLink to="/">
         <FontAwesomeIcon icon="home"></FontAwesomeIcon> Home
-      </Link>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
+      </NavLink>
+      <NavLink to="/about">About</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+    </div>
   )
 }
 
