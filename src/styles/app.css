@@ -2,17 +2,4 @@
 
 @tailwind components;
 
-.subheading {
-  @apply text-gray-500 uppercase;
-}
-
-.header {
-}
-.nav {
-}
-.layout {
-}
-.footer {
-}
-
 @tailwind utilities;

@@ -56,7 +56,7 @@ const Contact = () => {
         ></textarea>
         {errors.field && <p>error message</p>}
         <button type="submit" name="button">
-          <i class="fa fa-paper-plane">submit</i>
+          submit
         </button>
       </form>
     </Layout>
