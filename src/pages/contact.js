@@ -1,6 +1,6 @@
 import React from "react"
 import { useForm } from "react-hook-form"
-import Layout from "../components/layout"
+import LayoutNavBar from "../components/layoutnavbar"
 
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm()
@@ -19,7 +19,7 @@ const Contact = () => {
       .then(data => console.log(data))
   }
   return (
-    <Layout
+    <LayoutNavBar
       title="contact"
       description="drop me a line, come down to the coast, we'll have a few beers...."
     >
@@ -59,7 +59,7 @@ const Contact = () => {
           submit
         </button>
       </form>
-    </Layout>
+    </LayoutNavBar>
   )
 }
 

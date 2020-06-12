@@ -1,12 +1,11 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import tw from "tailwind.macro"
 import Transition from "../transition"
 import Akio from "../../images/svg/akio.svg"
 import Danferth from "../../images/svg/danferth.svg"
-import NavLink from "../el/navlink"
-import NavLinkMobile from "../el/navlinkmobile"
 
 const NavBar = props => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +17,48 @@ const NavBar = props => {
     transition-duration: 150ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   `
-
+  const NavLink = props => {
+    return (
+      <Link
+        to={props.to}
+        css={css`
+          ${tw`ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700`}
+          &:first-of-type {
+            margin-left: 0;
+          }
+          transition-property: background-color, border-color, color, fill,
+            stroke, opacity, box-shadow, transform;
+          transition-duration: 150ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        `}
+        activeStyle={tw` text-white bg-gray-900`}
+        className={props.className}
+      >
+        {props.children}
+      </Link>
+    )
+  }
+  const NavLinkMobile = props => {
+    return (
+      <Link
+        to={props.to}
+        css={css`
+          ${tw`mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700`}
+          &:first-of-type {
+            margin-top: 0;
+          }
+          transition-property: background-color, border-color, color, fill,
+            stroke, opacity, box-shadow, transform;
+          transition-duration: 150ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        `}
+        activeStyle={tw` text-white bg-gray-900 `}
+        className={props.className}
+      >
+        {props.children}
+      </Link>
+    )
+  }
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -64,12 +104,14 @@ const NavBar = props => {
 
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
-              <Akio
-                css={tw`block lg:hidden h-8 w-auto text-red-600 fill-current`}
-              />
-              <Danferth
-                css={tw`hidden lg:block h-8 w-auto text-gray-300 fill-current`}
-              />
+              <Link to="/">
+                <Akio
+                  css={tw`block lg:hidden h-8 w-auto text-red-600 fill-current`}
+                />
+                <Danferth
+                  css={tw`hidden lg:block h-8 w-auto text-gray-300 fill-current`}
+                />
+              </Link>
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex">

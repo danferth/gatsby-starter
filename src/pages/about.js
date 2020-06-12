@@ -1,14 +1,14 @@
 import React from "react"
-import Layout from "../components/layout"
+import LayoutNavBar from "../components/layoutnavbar"
 
 const About = () => {
   return (
-    <Layout
+    <LayoutNavBar
       title="about page"
       description="this is the about page of the website"
     >
       <p>some lorem ipsumed About content</p>
-    </Layout>
+    </LayoutNavBar>
   )
 }
 export default About
