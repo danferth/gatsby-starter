@@ -1,4 +1,5 @@
-import React from "react"
+import React,{useContext} from "react"
+import StateContext from "../components/el/provider"
 import Layout from "../components/layout"
 import Icon from "../images/svg/akio.svg"
 import { css } from "@emotion/core"
@@ -6,6 +7,8 @@ import tw from "tailwind.macro"
 import PageLink from "../components/pagelink"
 
 const App = () => {
+  const {stateSample} = useContext(StateContext)
+  const [sample, setSample] = stateSample
   return (
     <Layout title="home" description="description of page">
       <Icon
